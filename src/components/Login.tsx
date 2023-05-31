@@ -6,7 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [status, setStatus] = useState<Number>();
-  const baseurl = 'http://localhost:5000';
+  const baseurl = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
